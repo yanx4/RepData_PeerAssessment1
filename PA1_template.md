@@ -18,14 +18,13 @@ t1<-group_by(t0,date)
 totalstep.day<-summarize(t1,totalsteps.day=sum(steps,na.rm=TRUE))
 ```
 
-2.Make a histogram of the total number of steps taken each day
+2. Make a histogram of the total number of steps taken each day
 
 ```r
 hist(totalstep.day$totalsteps.day,xlab="total number of steps per day", main="Histogram of total number of steps per Day",breaks=25,col="blue")
 ```
 
 ![](PA1_template_files/figure-html/unnamed-chunk-3-1.png) 
-
 
 3. Calculate and report the mean and median of the total number of steps taken per day
 
@@ -45,7 +44,7 @@ median(totalstep.day$totalsteps.day,na.rm=TRUE)
 ## [1] 10395
 ```
 ## What is the average daily activity pattern?
-1.Make a time series plot of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis)
+1. Make a time series plot of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis)
 
 ```r
 t2<-group_by(t0,interval)
@@ -55,7 +54,7 @@ plot(avg.steps$interval,avg.steps$avg.steps,type="l",xlab="5-minute interval",yl
 
 ![](PA1_template_files/figure-html/unnamed-chunk-5-1.png) 
 
-2.Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
+2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
 ```r
 avg.steps[which.max(avg.steps$avg.steps),]$interval
