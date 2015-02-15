@@ -26,6 +26,7 @@ totalstep.day<-summarize(t1,totalsteps.day=sum(steps,na.rm=TRUE))
 hist(totalstep.day$totalsteps.day,xlab="total number of steps per day", main="Histogram of total number of steps per Day",breaks=25,col="blue")
 ```
 
+
 3. Calculate and report the mean and median of the total number of steps taken per day
 ```{r}
 mean(totalstep.day$totalsteps.day,na.rm=TRUE)

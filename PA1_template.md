@@ -26,6 +26,7 @@ hist(totalstep.day$totalsteps.day,xlab="total number of steps per day", main="Hi
 
 ![](PA1_template_files/figure-html/unnamed-chunk-3-1.png) 
 
+
 3. Calculate and report the mean and median of the total number of steps taken per day
 
 ```r
